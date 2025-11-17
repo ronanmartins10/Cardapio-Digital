@@ -58,7 +58,7 @@ export function CreateModal({ closeModal }: ModalProps){
                     className="close-btn"
                     type="button" 
                 >
-                    X
+                    
                 </button>
                 <h2>Cadastre um novo item no cardápio</h2>
                 <form className="input-container">

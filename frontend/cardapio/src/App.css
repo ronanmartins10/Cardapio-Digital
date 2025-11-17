@@ -31,12 +31,9 @@
     transform: scale(1.1);
 }
 
-/* No seu arquivo src/App.css (ou o CSS que contém a classe da lista de cards) */
 
-.card-list { /* Use a classe que envolve os cards */
-    /* ... seu código existente de grid/flex ... */
 
-    /* Aumenta o espaço interno na lateral direita e embaixo para afastar os cards e o botão 'NOVO' */
+.card-list { 
     padding-right: 30px; 
     padding-bottom: 50px; 
 }
