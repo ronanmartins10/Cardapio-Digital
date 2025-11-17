@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 
-    z-index: 999;
+    z-index: 1000;
 }
 
 .modal-overlay .modal-body {
@@ -24,6 +24,8 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    z-index: 1001;
 }
 
 .modal-overlay .modal-body h2 {
@@ -62,4 +64,32 @@
 .modal-overlay .modal-body .btn-secondary:hover {
     background-color: #3a44f8;
     transform: scale(1);
+}
+
+/* src/components/create-modal/modal.css */
+
+/* Garante que o botão 'X' seja posicionado de forma absoluta dentro do corpo */
+.modal-body {
+    position: relative; 
+    z-index: 1001;
+    /* ESSENCIAL */
+    /* ... o resto do seu CSS para modal-body ... */
+}
+
+/* Estilização do botão de fechar */
+.close-btn {
+    position: absolute !important;
+    top: 15px;
+    right: 15px;
+    background-color: transparent !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important; /* Remove a área que forma a "faixa" */
+    box-shadow: none !important;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333; 
+    font-weight: bold;
+    line-height: 1;
+    padding: 0;
 }

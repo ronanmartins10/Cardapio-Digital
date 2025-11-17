@@ -3,13 +3,17 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 100vw
+    width: 100vw;
+    padding-left: 16px;
+    padding-right: 16px;
 }
   
 .card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    padding-right: 30px;
+    padding-bottom: 50px;
 }
   
 .container button {
@@ -25,5 +29,15 @@
 .container button:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
     transform: scale(1.1);
+}
+
+/* No seu arquivo src/App.css (ou o CSS que contém a classe da lista de cards) */
+
+.card-list { /* Use a classe que envolve os cards */
+    /* ... seu código existente de grid/flex ... */
+
+    /* Aumenta o espaço interno na lateral direita e embaixo para afastar os cards e o botão 'NOVO' */
+    padding-right: 30px; 
+    padding-bottom: 50px; 
 }
   

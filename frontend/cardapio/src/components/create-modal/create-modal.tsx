@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useFoodDataMutate } from '../../hooks/useFoodDataMutate';
 import type { FoodData } from '../../interface/FoodData';
+import React from 'react';
 
 import "./modal.css";
 
@@ -38,14 +39,27 @@ export function CreateModal({ closeModal }: ModalProps){
         mutate(foodData)
     }
 
+    const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (event.target === event.currentTarget) {
+            closeModal();
+        }
+    };
+
     useEffect(() => {
         if(!isSuccess) return 
         closeModal();
     }, [isSuccess])
 
     return(
-        <div className="modal-overlay">
+        <div className="modal-overlay" onClick={handleOverlayClick}>
             <div className="modal-body">
+                <button 
+                    onClick={closeModal} 
+                    className="close-btn"
+                    type="button" 
+                >
+                    X
+                </button>
                 <h2>Cadastre um novo item no cardápio</h2>
                 <form className="input-container">
                     <Input label="title" value={title} updateValue={setTitle}/>
